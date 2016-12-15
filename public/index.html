@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dinner Spinner Is Here</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+
+    <!--Bootstrap File-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+    <script async defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3WjE2RZUtl1Tz-dP8-rthqZVAfox_Ztg&libraries=places&callback=initMap">
+    </script>
+</head>
+
+<body>
+
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container"">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading"> Dinner Spinner</h1>
+                        <p class="intro-text">Can't decide what you want for dinner?
+                            <br>Dinner Spinner is here for you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+	
+	<section id="zipSection" class="content-section text-center">
+	<div class="container">
+		<div class="col-lg-8 col-lg-offset-2">
+			<!--The form user enter address to confine the list of restaurants-->
+			<form id="addressform">
+			  <label for="address"><h4>Enter your Address</h4></label>
+			  <input class="form-control input-lg" type="text" id="address" value="77030">
+			  <!--Button triggered to add a zip code-->
+			  <br>
+			  <button id="submit">Spin the Wheel!</button>
+			  <br>
+			  <div id="map">
+				googlemap here
+			</div>
+			</form>
+		</div>
+	</div>
+	</section>
+	
+		<div class="row">
+			<div class="col-md-6">
+			<canvas id="canvas" width="600" height="600"></canvas>
+			</div>
+			<div class="col-md-6" id="restauranttable">
+			</div>
+		</div>
+	</div>
+</body>
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+</html>
